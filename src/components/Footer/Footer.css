@@ -1,0 +1,309 @@
+
+/* =====================================================
+   MAVALIU TECHNOLOGY
+   FOOTER CORPORATIVO
+===================================================== */
+
+.mavaliu-footer {
+  width: 100%;
+  background: #142451;
+  color: #cbd5e1;
+}
+
+/* =====================================================
+   CONTENIDO PRINCIPAL
+===================================================== */
+
+.mavaliu-footer-main {
+  padding: 75px 0 65px;
+  background:
+    radial-gradient(
+      circle at 90% 10%,
+      rgba(61, 79, 205, 0.14),
+      transparent 40%
+    ),
+    #142451;
+}
+
+/* =====================================================
+   IDENTIDAD CORPORATIVA
+===================================================== */
+
+.mavaliu-footer-brand {
+  max-width: 340px;
+}
+
+.mavaliu-footer-logo {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 240px;
+  padding: 13px 18px;
+  margin-bottom: 25px;
+  background: #ffffff;
+  border-radius: 12px;
+}
+
+.mavaliu-footer-logo img {
+  display: block;
+  width: 100%;
+  max-height: 80px;
+  object-fit: contain;
+}
+
+.mavaliu-footer-brand p {
+  margin-bottom: 22px;
+  color: #cbd5e1;
+  font-size: 0.91rem;
+  line-height: 1.85;
+}
+
+.mavaliu-footer-about-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  color: #c1ccff;
+  font-size: 0.88rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: color 0.25s ease;
+}
+
+.mavaliu-footer-about-link:hover {
+  color: #ffffff;
+}
+
+/* =====================================================
+   COLUMNAS DE NAVEGACIÓN
+===================================================== */
+
+.mavaliu-footer-column h3 {
+  position: relative;
+  margin: 5px 0 28px;
+  padding-bottom: 14px;
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.mavaliu-footer-column h3::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 35px;
+  height: 2px;
+  background: #8295ff;
+  border-radius: 2px;
+}
+
+.mavaliu-footer-column ul {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.mavaliu-footer-column ul li a {
+  display: inline-flex;
+  align-items: flex-start;
+  gap: 8px;
+  color: #cbd5e1;
+  font-size: 0.87rem;
+  line-height: 1.5;
+  text-decoration: none;
+  transition:
+    color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.mavaliu-footer-column ul li a svg {
+  flex-shrink: 0;
+  margin-top: 3px;
+  color: #91a3ff;
+}
+
+.mavaliu-footer-column ul li a:hover {
+  color: #ffffff;
+  transform: translateX(3px);
+}
+
+/* =====================================================
+   INFORMACIÓN DE CONTACTO
+===================================================== */
+
+.mavaliu-footer-contact-description {
+  margin-bottom: 22px;
+  color: #cbd5e1;
+  font-size: 0.88rem;
+  line-height: 1.8;
+}
+
+.mavaliu-footer-email {
+  display: inline-flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 25px;
+  color: #ffffff;
+  font-size: 0.88rem;
+  font-weight: 600;
+  text-decoration: none;
+  overflow-wrap: anywhere;
+}
+
+.mavaliu-footer-email svg {
+  flex-shrink: 0;
+  color: #aabaff;
+}
+
+.mavaliu-footer-email:hover {
+  color: #c1ccff;
+}
+
+.mavaliu-footer-contact-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 12px 19px;
+  background: #3d4fcd;
+  color: #ffffff;
+  border-radius: 8px;
+  font-size: 0.87rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition:
+    background-color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.mavaliu-footer-contact-btn:hover {
+  background: #5264e2;
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+/* =====================================================
+   FRANJA INFERIOR
+===================================================== */
+
+.mavaliu-footer-bottom {
+  padding: 22px 0;
+  background: #0d1b3f;
+  border-top: 1px solid rgba(255,255,255,0.08);
+}
+
+.mavaliu-footer-bottom-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.mavaliu-footer-copyright {
+  color: #aebbd4;
+  font-size: 0.8rem;
+  line-height: 1.6;
+}
+
+/* =====================================================
+   CRÉDITO DEL DESARROLLADOR
+===================================================== */
+
+.mavaliu-footer-developer {
+  display: inline-flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 6px;
+  font-size: 0.8rem;
+}
+
+.mavaliu-footer-developer > span {
+  color: #aebbd4;
+}
+
+.mavaliu-footer-developer a {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  color: #ffffff;
+  font-weight: 700;
+  text-decoration: none;
+  transition: color 0.25s ease;
+}
+
+.mavaliu-footer-developer a:hover {
+  color: #aabaff;
+}
+
+.mavaliu-footer-developer a svg {
+  color: #91a3ff;
+}
+
+/* =====================================================
+   ACCESIBILIDAD
+===================================================== */
+
+.mavaliu-footer a:focus-visible {
+  outline: 2px solid #aabaff;
+  outline-offset: 4px;
+  border-radius: 3px;
+}
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media (max-width: 991.98px) {
+  .mavaliu-footer-main {
+    padding: 65px 0 55px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .mavaliu-footer-main {
+    padding: 55px 0 45px;
+  }
+
+  .mavaliu-footer-brand {
+    max-width: 100%;
+  }
+
+  .mavaliu-footer-bottom-content {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .mavaliu-footer-main {
+    padding: 45px 0 35px;
+  }
+
+  .mavaliu-footer-logo {
+    max-width: 210px;
+  }
+
+  .mavaliu-footer-bottom {
+    padding: 20px 0;
+  }
+
+  .mavaliu-footer-bottom-content {
+    align-items: center;
+    text-align: center;
+  }
+
+  .mavaliu-footer-developer {
+    justify-content: center;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .mavaliu-footer a {
+    transition: none;
+  }
+}

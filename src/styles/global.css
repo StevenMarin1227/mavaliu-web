@@ -1,0 +1,42 @@
+
+/* =====================================================
+   MAVALIU TECHNOLOGY - ESTILOS GLOBALES
+===================================================== */
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  font-family:
+    "Segoe UI",
+    Arial,
+    sans-serif;
+  color: var(--mavaliu-text);
+  background: var(--mavaliu-white);
+  -webkit-font-smoothing: antialiased;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--mavaliu-dark);
+}
+
+a {
+  transition: color 0.25s ease;
+}
+
+::selection {
+  background: var(--mavaliu-primary);
+  color: #ffffff;
+}

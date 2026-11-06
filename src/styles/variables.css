@@ -1,0 +1,27 @@
+
+:root {
+  /* Identidad corporativa MAVALIU */
+  --mavaliu-primary: #3D4FCD;
+  --mavaliu-secondary: #4B589E;
+  --mavaliu-dark: #25366F;
+
+  /* Fondos */
+  --mavaliu-light: #F4F6FC;
+  --mavaliu-white: #FFFFFF;
+
+  /* Tipografía */
+  --mavaliu-text: #202B46;
+  --mavaliu-muted: #64748B;
+
+  /* Degradado corporativo */
+  --mavaliu-gradient: linear-gradient(
+    120deg,
+    #25366F 0%,
+    #4B589E 50%,
+    #3D4FCD 100%
+  );
+
+  /* Elementos visuales */
+  --mavaliu-radius: 12px;
+  --mavaliu-transition: all 0.3s ease;
+}

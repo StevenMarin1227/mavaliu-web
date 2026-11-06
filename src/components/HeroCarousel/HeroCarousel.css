@@ -1,0 +1,414 @@
+
+/* =====================================================
+   MAVALIU TECHNOLOGY - HERO CAROUSEL
+===================================================== */
+
+.mavaliu-hero {
+  position: relative;
+  width: 100%;
+  height: min(760px, calc(100svh - 90px));
+  min-height: 570px;
+  overflow: hidden;
+  background: var(--mavaliu-dark);
+  color: #ffffff;
+}
+
+/* =====================================================
+   DIAPOSITIVAS E IMÁGENES
+===================================================== */
+
+.mavaliu-hero-slides {
+  position: absolute;
+  inset: 0;
+}
+
+.mavaliu-hero-slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition:
+    opacity 0.9s ease,
+    visibility 0.9s ease;
+}
+
+.mavaliu-hero-slide.is-active {
+  opacity: 1;
+  visibility: visible;
+  z-index: 1;
+}
+
+.mavaliu-hero-image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Degradado para contraste */
+.mavaliu-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(15, 25, 58, 0.96) 0%,
+      rgba(25, 39, 86, 0.88) 38%,
+      rgba(37, 54, 111, 0.50) 70%,
+      rgba(20, 30, 65, 0.28) 100%
+    );
+}
+
+/* =====================================================
+   CONTENIDO PRINCIPAL
+===================================================== */
+
+.mavaliu-hero-container {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  padding-top: 35px;
+  padding-bottom: 100px;
+}
+
+.mavaliu-hero-content {
+  max-width: 750px;
+}
+
+.mavaliu-hero-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 24px;
+  color: #c5d2ff;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.mavaliu-hero-line {
+  display: block;
+  width: 36px;
+  height: 3px;
+  background: #8293ff;
+  border-radius: 3px;
+}
+
+.mavaliu-hero-title {
+  margin: 0;
+  color: #ffffff;
+  font-size: clamp(2.5rem, 4.5vw, 4.6rem);
+  font-weight: 750;
+  line-height: 1.13;
+  letter-spacing: -1.8px;
+}
+
+.mavaliu-hero-description {
+  max-width: 620px;
+  margin-top: 26px;
+  margin-bottom: 0;
+  color: #e1e7f7;
+  font-size: 1.12rem;
+  line-height: 1.8;
+}
+
+/* =====================================================
+   BOTONES
+===================================================== */
+
+.mavaliu-hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 35px;
+}
+
+.mavaliu-hero-btn-primary,
+.mavaliu-hero-btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  min-height: 52px;
+  padding: 14px 25px;
+  border-radius: 8px;
+  font-size: 0.94rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition:
+    background-color 0.3s ease,
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.mavaliu-hero-btn-primary {
+  background: var(--mavaliu-primary);
+  color: #ffffff;
+  border: 1px solid var(--mavaliu-primary);
+}
+
+.mavaliu-hero-btn-primary:hover {
+  background: #5365e5;
+  border-color: #5365e5;
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+.mavaliu-hero-btn-secondary {
+  background: rgba(255, 255, 255, 0.06);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.65);
+  backdrop-filter: blur(5px);
+}
+
+.mavaliu-hero-btn-secondary:hover {
+  background: #ffffff;
+  color: var(--mavaliu-dark);
+  transform: translateY(-2px);
+}
+
+/* =====================================================
+   CONTROLES INFERIORES
+===================================================== */
+
+.mavaliu-hero-bottom {
+  position: absolute;
+  z-index: 5;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 25px 0;
+}
+
+.mavaliu-hero-bottom-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.mavaliu-hero-indicators {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.mavaliu-hero-indicator {
+  width: 34px;
+  height: 5px;
+  padding: 0;
+  background: rgba(255, 255, 255, 0.35);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition:
+    width 0.3s ease,
+    background-color 0.3s ease;
+}
+
+.mavaliu-hero-indicator.is-active {
+  width: 55px;
+  background: #ffffff;
+}
+
+.mavaliu-hero-controls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.mavaliu-hero-counter {
+  margin-right: 15px;
+  color: #ffffff;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.mavaliu-hero-counter span {
+  color: rgba(255, 255, 255, 0.55);
+}
+
+.mavaliu-hero-control {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  background: rgba(255, 255, 255, 0.08);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.mavaliu-hero-control:hover {
+  background: var(--mavaliu-primary);
+  border-color: var(--mavaliu-primary);
+}
+
+.mavaliu-hero-control:focus-visible,
+.mavaliu-hero-indicator:focus-visible,
+.mavaliu-hero-btn-primary:focus-visible,
+.mavaliu-hero-btn-secondary:focus-visible {
+  outline: 3px solid #ffffff;
+  outline-offset: 4px;
+}
+
+/* =====================================================
+   TABLETAS
+===================================================== */
+
+@media (max-width: 991.98px) {
+  .mavaliu-hero {
+    height: 650px;
+    min-height: 570px;
+  }
+
+  .mavaliu-hero-content {
+    max-width: 650px;
+  }
+
+  .mavaliu-hero-title {
+    font-size: clamp(2.3rem, 5vw, 3.5rem);
+  }
+
+  .mavaliu-hero-description {
+    font-size: 1.05rem;
+  }
+
+  .mavaliu-hero-overlay {
+    background: linear-gradient(
+      90deg,
+      rgba(15, 25, 58, 0.96),
+      rgba(25, 39, 86, 0.82) 60%,
+      rgba(37, 54, 111, 0.55)
+    );
+  }
+}
+
+/* =====================================================
+   DISPOSITIVOS MÓVILES
+===================================================== */
+
+@media (max-width: 575.98px) {
+  .mavaliu-hero {
+    height: auto;
+    min-height: 660px;
+  }
+
+  .mavaliu-hero-container {
+    padding-top: 55px;
+    padding-bottom: 125px;
+  }
+
+  .mavaliu-hero-content {
+    width: 100%;
+  }
+
+  .mavaliu-hero-eyebrow {
+    margin-bottom: 18px;
+    font-size: 0.7rem;
+    letter-spacing: 1.5px;
+  }
+
+  .mavaliu-hero-title {
+    font-size: clamp(2rem, 8vw, 2.7rem);
+    line-height: 1.2;
+    letter-spacing: -0.8px;
+  }
+
+  .mavaliu-hero-description {
+    margin-top: 20px;
+    font-size: 0.95rem;
+    line-height: 1.7;
+  }
+
+  .mavaliu-hero-actions {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+    margin-top: 28px;
+  }
+
+  .mavaliu-hero-btn-primary,
+  .mavaliu-hero-btn-secondary {
+    width: 100%;
+    min-height: 48px;
+    padding: 12px 18px;
+  }
+
+  .mavaliu-hero-overlay {
+    background: linear-gradient(
+      90deg,
+      rgba(15, 25, 58, 0.95),
+      rgba(25, 39, 86, 0.83)
+    );
+  }
+
+  .mavaliu-hero-image {
+    object-position: 65% center;
+  }
+
+  .mavaliu-hero-bottom {
+    padding: 20px 0;
+  }
+
+  .mavaliu-hero-bottom-inner {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .mavaliu-hero-counter {
+    margin-right: 8px;
+  }
+
+  .mavaliu-hero-control {
+    width: 38px;
+    height: 38px;
+  }
+}
+
+/* =====================================================
+   ACCESIBILIDAD
+===================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  .mavaliu-hero-slide,
+  .mavaliu-hero-indicator,
+  .mavaliu-hero-control,
+  .mavaliu-hero-btn-primary,
+  .mavaliu-hero-btn-secondary {
+    transition: none;
+  }
+}
+
+
+/* =====================================================
+   FONDO DE RESPALDO DEL CARRUSEL
+===================================================== */
+
+.mavaliu-hero-image-fallback {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+
+  background:
+    radial-gradient(
+      circle at 80% 30%,
+      rgba(100, 120, 255, 0.35),
+      transparent 45%
+    ),
+    linear-gradient(
+      120deg,
+      #101d42 0%,
+      #25366f 55%,
+      #3d4fcd 100%
+    );
+}

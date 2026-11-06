@@ -1,0 +1,493 @@
+
+/* =====================================================
+   MAVALIU TECHNOLOGY
+   PÁGINAS INDIVIDUALES DE SERVICIOS
+===================================================== */
+
+/* =====================================================
+   HERO CORPORATIVO
+===================================================== */
+
+.mavaliu-detail-hero {
+  position: relative;
+  padding: 55px 0 100px;
+  overflow: hidden;
+  background:
+    radial-gradient(
+      circle at 85% 35%,
+      rgba(93, 119, 255, 0.25),
+      transparent 38%
+    ),
+    linear-gradient(
+      120deg,
+      #142451 0%,
+      #25366f 55%,
+      #3449a5 100%
+    );
+}
+
+.mavaliu-detail-hero::after {
+  content: "";
+  position: absolute;
+  right: -130px;
+  top: -180px;
+  width: 500px;
+  height: 500px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+/* Breadcrumb */
+
+.mavaliu-detail-breadcrumb {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 65px;
+  color: #dbe4ff;
+  font-size: 0.85rem;
+}
+
+.mavaliu-detail-breadcrumb a {
+  color: #dbe4ff;
+  text-decoration: none;
+}
+
+.mavaliu-detail-breadcrumb a:hover {
+  color: #ffffff;
+}
+
+.mavaliu-detail-breadcrumb span {
+  color: #ffffff;
+  font-weight: 600;
+}
+
+/* Textos principales */
+
+.mavaliu-detail-eyebrow {
+  display: inline-block;
+  margin-bottom: 22px;
+  color: #a9bfff;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.mavaliu-detail-title {
+  max-width: 850px;
+  margin-bottom: 25px;
+  color: #ffffff;
+  font-size: clamp(2.4rem, 4vw, 4rem);
+  font-weight: 750;
+  line-height: 1.15;
+  letter-spacing: -1.5px;
+}
+
+.mavaliu-detail-description {
+  max-width: 750px;
+  margin-bottom: 35px;
+  color: #dbe4ff;
+  font-size: 1.1rem;
+  line-height: 1.85;
+}
+
+/* Botones */
+
+.mavaliu-detail-actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.mavaliu-detail-btn-primary,
+.mavaliu-detail-btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 15px 24px;
+  border-radius: 9px;
+  font-size: 0.93rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition:
+    transform 0.25s ease,
+    background-color 0.25s ease;
+}
+
+.mavaliu-detail-btn-primary {
+  background: #ffffff;
+  color: #25366f;
+}
+
+.mavaliu-detail-btn-primary:hover {
+  color: #25366f;
+  transform: translateY(-3px);
+}
+
+.mavaliu-detail-btn-secondary {
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  color: #ffffff;
+}
+
+.mavaliu-detail-btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+}
+
+/* Elemento visual */
+
+.mavaliu-detail-visual {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+  min-height: 300px;
+}
+
+.mavaliu-detail-visual-ring {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 230px;
+  height: 230px;
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.06);
+  box-shadow:
+    0 0 0 25px rgba(255, 255, 255, 0.035),
+    0 0 0 50px rgba(255, 255, 255, 0.02);
+}
+
+.mavaliu-detail-visual > span {
+  color: #dbe4ff;
+  font-size: 0.85rem;
+  letter-spacing: 3px;
+}
+
+/* =====================================================
+   PRESENTACIÓN Y CAPACIDADES
+===================================================== */
+
+.mavaliu-detail-overview {
+  padding: 105px 0;
+  background: #ffffff;
+}
+
+.mavaliu-detail-section-label {
+  display: inline-block;
+  margin-bottom: 18px;
+  color: var(--mavaliu-primary, #3d4fcd);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 1.8px;
+}
+
+.mavaliu-detail-overview h2 {
+  margin-bottom: 25px;
+  color: var(--mavaliu-dark, #25366f);
+  font-size: clamp(1.9rem, 3vw, 2.8rem);
+  font-weight: 750;
+  line-height: 1.25;
+}
+
+.mavaliu-detail-overview p {
+  color: #64748b;
+  font-size: 1rem;
+  line-height: 1.9;
+}
+
+/* Panel de capacidades */
+
+.mavaliu-detail-capabilities {
+  padding: 35px;
+  background: #f5f7fc;
+  border: 1px solid #e7ebf4;
+  border-radius: 18px;
+}
+
+.mavaliu-detail-capabilities-header {
+  display: flex;
+  align-items: center;
+  gap: 17px;
+  margin-bottom: 28px;
+  padding-bottom: 25px;
+  border-bottom: 1px solid #e0e6f1;
+}
+
+.mavaliu-detail-capabilities-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  background: #e5eaff;
+  color: #3d4fcd;
+  border-radius: 12px;
+}
+
+.mavaliu-detail-capabilities-header span {
+  color: #3d4fcd;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.mavaliu-detail-capabilities-header h3 {
+  margin: 5px 0 0;
+  color: #25366f;
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.mavaliu-detail-capabilities-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.mavaliu-detail-capability {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  color: #475569;
+  font-size: 0.91rem;
+  line-height: 1.6;
+}
+
+.mavaliu-detail-capability svg {
+  flex-shrink: 0;
+  margin-top: 3px;
+  color: #3d4fcd;
+}
+
+/* =====================================================
+   CAPACIDADES DESTACADAS
+===================================================== */
+
+.mavaliu-detail-highlights {
+  padding: 95px 0;
+  background: #f5f7fc;
+}
+
+.mavaliu-detail-highlights-heading {
+  max-width: 650px;
+  margin: 0 auto 45px;
+  text-align: center;
+}
+
+.mavaliu-detail-highlights-heading h2 {
+  margin-bottom: 15px;
+  color: #25366f;
+  font-size: clamp(1.9rem, 3vw, 2.7rem);
+  font-weight: 750;
+}
+
+.mavaliu-detail-highlights-heading p {
+  color: #64748b;
+  line-height: 1.8;
+}
+
+.mavaliu-detail-highlight-card {
+  height: 100%;
+  min-height: 230px;
+  padding: 30px;
+  background: #ffffff;
+  border: 1px solid #e7ebf4;
+  border-radius: 15px;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.mavaliu-detail-highlight-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 15px 35px rgba(37, 54, 111, 0.09);
+}
+
+.mavaliu-detail-highlight-number {
+  display: block;
+  margin-bottom: 20px;
+  color: #b7c3e2;
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+.mavaliu-detail-highlight-icon {
+  margin-bottom: 20px;
+  color: #3d4fcd;
+}
+
+.mavaliu-detail-highlight-card h3 {
+  margin: 0;
+  color: #25366f;
+  font-size: 1.15rem;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+/* =====================================================
+   LLAMADO A LA ACCIÓN
+===================================================== */
+
+.mavaliu-detail-contact {
+  padding: 80px 0;
+  background: #ffffff;
+}
+
+.mavaliu-detail-contact-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  padding: 55px;
+  background:
+    linear-gradient(120deg, #25366f, #3d4fcd);
+  border-radius: 18px;
+}
+
+.mavaliu-detail-contact-box > div {
+  max-width: 680px;
+}
+
+.mavaliu-detail-contact-box span {
+  display: inline-block;
+  margin-bottom: 15px;
+  color: #c9d3ff;
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+}
+
+.mavaliu-detail-contact-box h2 {
+  margin-bottom: 15px;
+  color: #ffffff;
+  font-size: clamp(1.6rem, 2.5vw, 2.4rem);
+  font-weight: 700;
+}
+
+.mavaliu-detail-contact-box p {
+  margin: 0;
+  color: #dbe4ff;
+  line-height: 1.8;
+}
+
+.mavaliu-detail-contact-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  gap: 12px;
+  padding: 16px 24px;
+  background: #ffffff;
+  color: #25366f;
+  border-radius: 9px;
+  font-size: 0.92rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.mavaliu-detail-contact-btn:hover {
+  color: #25366f;
+  background: #edf0ff;
+}
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media (max-width: 991.98px) {
+  .mavaliu-detail-hero {
+    padding: 40px 0 75px;
+  }
+
+  .mavaliu-detail-breadcrumb {
+    margin-bottom: 45px;
+  }
+
+  .mavaliu-detail-visual {
+    min-height: 220px;
+  }
+
+  .mavaliu-detail-visual-ring {
+    width: 170px;
+    height: 170px;
+  }
+
+  .mavaliu-detail-overview,
+  .mavaliu-detail-highlights {
+    padding: 75px 0;
+  }
+
+  .mavaliu-detail-contact-box {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 40px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .mavaliu-detail-hero {
+    padding: 30px 0 60px;
+  }
+
+  .mavaliu-detail-title {
+    font-size: 2.2rem;
+  }
+
+  .mavaliu-detail-description {
+    font-size: 1rem;
+  }
+
+  .mavaliu-detail-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .mavaliu-detail-btn-primary,
+  .mavaliu-detail-btn-secondary {
+    width: 100%;
+  }
+
+  .mavaliu-detail-visual {
+    display: none;
+  }
+
+  .mavaliu-detail-overview,
+  .mavaliu-detail-highlights {
+    padding: 60px 0;
+  }
+
+  .mavaliu-detail-capabilities {
+    padding: 25px;
+  }
+
+  .mavaliu-detail-capabilities-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .mavaliu-detail-contact {
+    padding: 50px 0;
+  }
+
+  .mavaliu-detail-contact-box {
+    padding: 30px 25px;
+  }
+
+  .mavaliu-detail-contact-btn {
+    width: 100%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .mavaliu-detail-highlight-card,
+  .mavaliu-detail-btn-primary,
+  .mavaliu-detail-btn-secondary {
+    transition: none;
+  }
+}

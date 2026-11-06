@@ -1,0 +1,365 @@
+
+/* =====================================================
+   MAVALIU TECHNOLOGY
+   SECCIÓN DE SOLUCIONES TECNOLÓGICAS
+===================================================== */
+
+/* =====================================================
+   CONTENEDOR PRINCIPAL
+===================================================== */
+
+.mavaliu-solutions-section {
+  position: relative;
+  padding: 105px 0;
+  background: #f5f7fc;
+  overflow: hidden;
+}
+
+/* =====================================================
+   ENCABEZADO DE SECCIÓN
+===================================================== */
+
+.mavaliu-solutions-heading {
+  max-width: 780px;
+  margin: 0 auto 55px;
+  text-align: center;
+}
+
+.mavaliu-solutions-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+  color: var(--mavaliu-primary);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.mavaliu-solutions-line {
+  width: 30px;
+  height: 3px;
+  background: var(--mavaliu-primary);
+  border-radius: 5px;
+}
+
+.mavaliu-solutions-title {
+  margin-bottom: 22px;
+  color: var(--mavaliu-dark);
+  font-size: clamp(2rem, 3.2vw, 3rem);
+  font-weight: 750;
+  line-height: 1.2;
+  letter-spacing: -1px;
+}
+
+.mavaliu-solutions-description {
+  margin: 0;
+  color: #64748b;
+  font-size: 1.05rem;
+  line-height: 1.85;
+}
+
+/* =====================================================
+   CUADRÍCULA DE SERVICIOS
+===================================================== */
+
+.mavaliu-solutions-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 25px;
+}
+
+/* =====================================================
+   TARJETAS
+===================================================== */
+
+.mavaliu-service-card {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  min-height: 385px;
+  padding: 30px;
+  background: #ffffff;
+  border: 1px solid #e7ebf4;
+  border-radius: 16px;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.mavaliu-service-card:hover {
+  transform: translateY(-7px);
+  border-color: #c8d1f5;
+  box-shadow: 0 20px 45px rgba(37, 54, 111, 0.1);
+}
+
+/* Encabezado de tarjeta */
+.mavaliu-service-card-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 25px;
+}
+
+/* Icono */
+.mavaliu-service-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 65px;
+  height: 65px;
+  background: #edf0ff;
+  color: var(--mavaliu-primary);
+  border-radius: 14px;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+}
+
+.mavaliu-service-card:hover .mavaliu-service-icon {
+  background: var(--mavaliu-primary);
+  color: #ffffff;
+}
+
+/* Numeración */
+.mavaliu-service-number {
+  color: #cbd3e5;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+/* Título */
+.mavaliu-service-title {
+  margin-bottom: 15px;
+  color: var(--mavaliu-dark);
+  font-size: 1.23rem;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+/* Descripción */
+.mavaliu-service-description {
+  margin-bottom: 20px;
+  color: #64748b;
+  font-size: 0.93rem;
+  line-height: 1.75;
+}
+
+/* =====================================================
+   CAPACIDADES DESTACADAS
+===================================================== */
+
+.mavaliu-service-features {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin: 0 0 25px;
+  padding: 0;
+  list-style: none;
+}
+
+.mavaliu-service-features li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  color: #475569;
+  font-size: 0.87rem;
+  line-height: 1.5;
+}
+
+.mavaliu-service-features li svg {
+  flex-shrink: 0;
+  margin-top: 2px;
+  color: var(--mavaliu-primary);
+}
+
+/* =====================================================
+   PIE DE TARJETA
+===================================================== */
+
+.mavaliu-service-card-footer {
+  margin-top: auto;
+  padding-top: 20px;
+  border-top: 1px solid #edf0f5;
+}
+
+.mavaliu-service-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--mavaliu-primary);
+  font-size: 0.92rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: gap 0.25s ease;
+}
+
+.mavaliu-service-link:hover {
+  gap: 16px;
+  color: var(--mavaliu-dark);
+}
+
+/* =====================================================
+   LLAMADO A LA ACCIÓN
+===================================================== */
+
+.mavaliu-solutions-cta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 35px;
+  margin-top: 55px;
+  padding: 45px 50px;
+  background:
+    linear-gradient(
+      120deg,
+      #25366f 0%,
+      #3d4fcd 100%
+    );
+  border-radius: 18px;
+}
+
+.mavaliu-solutions-cta-content {
+  max-width: 650px;
+}
+
+.mavaliu-solutions-cta-label {
+  display: inline-block;
+  margin-bottom: 15px;
+  color: #c9d3ff;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+}
+
+.mavaliu-solutions-cta h3 {
+  margin-bottom: 15px;
+  color: #ffffff;
+  font-size: clamp(1.5rem, 2.3vw, 2.1rem);
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.mavaliu-solutions-cta p {
+  margin: 0;
+  color: #dce4ff;
+  font-size: 0.98rem;
+  line-height: 1.75;
+}
+
+.mavaliu-solutions-cta-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  gap: 12px;
+  padding: 16px 24px;
+  background: #ffffff;
+  color: #25366f;
+  border-radius: 9px;
+  font-size: 0.92rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.mavaliu-solutions-cta-button:hover {
+  color: #25366f;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* =====================================================
+   TABLETAS
+===================================================== */
+
+@media (max-width: 991.98px) {
+  .mavaliu-solutions-section {
+    padding: 80px 0;
+  }
+
+  .mavaliu-solutions-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+  }
+
+  .mavaliu-service-card {
+    padding: 25px;
+    min-height: 365px;
+  }
+
+  .mavaliu-solutions-cta {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 35px;
+  }
+}
+
+/* =====================================================
+   MÓVILES
+===================================================== */
+
+@media (max-width: 575.98px) {
+  .mavaliu-solutions-section {
+    padding: 65px 0;
+  }
+
+  .mavaliu-solutions-heading {
+    margin-bottom: 35px;
+  }
+
+  .mavaliu-solutions-title {
+    font-size: 1.9rem;
+  }
+
+  .mavaliu-solutions-description {
+    font-size: 0.95rem;
+  }
+
+  .mavaliu-solutions-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .mavaliu-service-card {
+    min-height: auto;
+    padding: 25px;
+  }
+
+  .mavaliu-solutions-cta {
+    margin-top: 35px;
+    padding: 30px 25px;
+    gap: 25px;
+  }
+
+  .mavaliu-solutions-cta h3 {
+    font-size: 1.5rem;
+  }
+
+  .mavaliu-solutions-cta-button {
+    width: 100%;
+  }
+}
+
+/* =====================================================
+   ACCESIBILIDAD
+===================================================== */
+
+.mavaliu-service-link:focus-visible,
+.mavaliu-solutions-cta-button:focus-visible {
+  outline: 3px solid var(--mavaliu-primary);
+  outline-offset: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .mavaliu-service-card,
+  .mavaliu-service-icon,
+  .mavaliu-service-link,
+  .mavaliu-solutions-cta-button {
+    transition: none;
+  }
+}
