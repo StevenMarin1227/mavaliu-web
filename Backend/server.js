@@ -1,7 +1,11 @@
 
 /* =====================================================
    MAVALIU TECHNOLOGY
-   SERVIDOR PRINCIPAL API
+   SERVIDOR PRINCIPAL - API REST
+
+   Backend: Node.js + Express
+   Hosting: Render
+   Correo: Resend API
 ===================================================== */
 
 import "dotenv/config";
@@ -11,22 +15,35 @@ import cors from "cors";
 import helmet from "helmet";
 
 import contactRoutes from "./routes/contactRoutes.js";
-
-import {
-  errorHandler,
-} from "./middleware/errorHandler.js";
-
-import {
-  verificarSMTP,
-} from "./config/mail.js";
+import { errorHandler } from "./middleware/errorHandler.js";
 
 /* =====================================================
-   CONFIGURACIÓN
+   INICIALIZAR EXPRESS
 ===================================================== */
 
 const app = express();
 
-const PORT = Number(process.env.PORT || 3001);
+const PORT = process.env.PORT || 3001;
+
+app.disable("x-powered-by");
+
+/* =====================================================
+   CONFIGURACIÓN DE PROXY - RENDER
+===================================================== */
+
+if (process.env.NODE_ENV === "production") {
+  app.set("trust proxy", 1);
+}
+
+/* =====================================================
+   SEGURIDAD
+===================================================== */
+
+app.use(helmet());
+
+/* =====================================================
+   CONFIGURACIÓN CORS
+===================================================== */
 
 const origenesPermitidos = (
   process.env.FRONTEND_URL || "http://localhost:5173"
@@ -35,21 +52,17 @@ const origenesPermitidos = (
   .map((origen) => origen.trim())
   .filter(Boolean);
 
-/* =====================================================
-   SEGURIDAD
-===================================================== */
-
-app.disable("x-powered-by");
-
-app.use(helmet());
-
 app.use(
   cors({
-    origin(origin, callback) {
-      if (
-        !origin ||
-        origenesPermitidos.includes(origin)
-      ) {
+    origin: (origin, callback) => {
+
+      // Permitir solicitudes sin encabezado Origin
+      // (por ejemplo, pruebas desde herramientas HTTP).
+      if (!origin) {
+        return callback(null, true);
+      }
+
+      if (origenesPermitidos.includes(origin)) {
         return callback(null, true);
       }
 
@@ -59,7 +72,10 @@ app.use(
     },
 
     methods: ["GET", "POST"],
-    allowedHeaders: ["Content-Type"],
+
+    allowedHeaders: [
+      "Content-Type",
+    ],
   })
 );
 
@@ -74,11 +90,11 @@ app.use(
 );
 
 /* =====================================================
-   HEALTH CHECK
+   RUTA DE SALUD
 ===================================================== */
 
 app.get("/api/health", (req, res) => {
-  res.status(200).json({
+  return res.status(200).json({
     success: true,
     service: "MAVALIU Technology API",
     status: "online",
@@ -86,7 +102,7 @@ app.get("/api/health", (req, res) => {
 });
 
 /* =====================================================
-   RUTAS
+   RUTAS DE CONTACTO
 ===================================================== */
 
 app.use("/api/contacto", contactRoutes);
@@ -96,41 +112,30 @@ app.use("/api/contacto", contactRoutes);
 ===================================================== */
 
 app.use((req, res) => {
-  res.status(404).json({
+  return res.status(404).json({
     success: false,
-    message: "Ruta no encontrada.",
+    message: "La ruta solicitada no existe.",
   });
 });
 
 /* =====================================================
-   MANEJO DE ERRORES
+   MANEJO GLOBAL DE ERRORES
 ===================================================== */
 
 app.use(errorHandler);
 
 /* =====================================================
-   INICIO DEL SERVIDOR
+   INICIAR SERVIDOR
 ===================================================== */
 
 app.listen(PORT, "0.0.0.0", () => {
+
   console.log(
     `[MAVALIU] API disponible en puerto ${PORT}`
   );
 
-  if (
-    process.env.SMTP_HOST &&
-    process.env.SMTP_USER &&
-    process.env.SMTP_PASSWORD
-  ) {
-    verificarSMTP().catch((error) => {
-      console.error(
-        "[MAVALIU] Error de conexión SMTP:",
-        error.message
-      );
-    });
-  } else {
-    console.warn(
-      "[MAVALIU] Configuración SMTP incompleta."
-    );
-  }
+  console.log(
+    "[MAVALIU] Proveedor de correo: Resend API"
+  );
+
 });
